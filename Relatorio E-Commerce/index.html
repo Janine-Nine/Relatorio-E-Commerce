@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatório de Feedbacks | E-commerce</title>
+<meta name="description" content="Relatório interativo para classificar feedbacks de e-commerce, comparar períodos e apoiar decisões operacionais.">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Inteligência de clientes · Marketing & Operações</div>
+  <h1>Relatório de Feedbacks do E-commerce</h1>
+  <p>Diagnóstico de problemas, comparação de volumes e plano de ação para uma operação de baixo volume com atendimento no Rio de Janeiro e em São Paulo.</p>
+</header>
+<main>
+  <div class="notice"><strong>Importante — dados demonstrativos:</strong> nenhum feedback real foi fornecido para esta análise. Os números e os exemplos abaixo são fictícios, apenas para demonstrar o relatório interativo. Cole os comentários reais na seção “Analisar seus dados” para obter uma classificação indicativa por palavras-chave.</div>
+  <div class="grid">
+    <div class="card"><div class="metric-label">Feedbacks no Grupo A</div><div class="metric" id="totalA">40</div><div class="metric-note" id="labelA">Período anterior · exemplo</div></div>
+    <div class="card"><div class="metric-label">Feedbacks no Grupo B</div><div class="metric" id="totalB">46</div><div class="metric-note" id="labelB">Período atual · exemplo</div></div>
+    <div class="card"><div class="metric-label">Categoria mais frequente · Grupo B</div><div class="metric" id="topCategory">Logística</div><div class="metric-note">Calculada a partir dos dados exibidos</div></div>
+    <div class="card"><div class="metric-label">Orçamento de implantação</div><div class="metric" id="budget">R$ 0–2.600</div><div class="metric-note">Estimativa indicativa, sem cotação</div></div>
+  </div>
+
+  <section class="section card">
+    <h2>Parecer executivo</h2>
+    <p id="executive">No cenário ilustrativo, Logística concentra a maior parcela dos registros. A recomendação inicial é verificar prazos prometidos versus entregues, motivos de atraso e qualidade do rastreamento antes de investir em ferramentas novas. Em uma operação pequena, começar com controles simples e acompanhamento semanal reduz risco e custo.</p>
+    <span class="tag demo">Cenário demonstrativo</span>
+  </section>
+
+  <section class="section two">
+    <div class="card">
+      <h2>Comparativo de volumes — barras duplas</h2>
+      <div class="legend"><span><i class="dot" style="background:var(--blue)"></i><span id="legendA">Grupo A</span></span><span><i class="dot" style="background:var(--cyan)"></i><span id="legendB">Grupo B</span></span></div>
+      <div id="chart" role="img" aria-label="Gráfico horizontal de barras duplas comparando volumes de feedback por categoria"></div>
+      <p class="muted small">Cada linha compara a quantidade por categoria nos dois grupos. Altere os dados no formulário para atualizar o gráfico.</p>
+    </div>
+    <div class="card">
+      <h2>Interpretação do gráfico</h2>
+      <div id="interpretation"></div>
+      <h3 style="margin-top:18px">O que validar antes de decidir</h3>
+      <ul>
+        <li>Comparar períodos de duração equivalente.</li>
+        <li>Dividir feedbacks pelo total de pedidos para obter uma taxa comparável.</li>
+        <li>Separar reclamações duplicadas e pedidos com mais de um problema.</li>
+        <li>Verificar diferenças entre RJ, SP, transportadoras e tipo de produto.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section card">
+    <h2>Problemas e classificações</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Problema</th><th scope="col">Quantidade A</th><th scope="col">Quantidade B</th><th scope="col">Foco central / palavras-chave</th></tr></thead>
+      <tbody id="categoryTable"></tbody>
+    </table></div>
+  </section>
+
+  <section class="section card">
+    <h2>Plano de ação e custo estimado</h2>
+    <p class="muted small">Faixas indicativas em reais para operação pequena no Brasil. Podem ser menores usando ferramentas existentes e trabalho interno; não incluem custos extraordinários, mensalidades de plataforma nem contratação de equipe dedicada.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Problema</th><th scope="col">Ação factível</th><th scope="col">Prazo sugerido</th><th scope="col">Implantação</th><th scope="col">Recorrente</th><th scope="col">Métrica de sucesso</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Logística</strong></td><td>Planilha de pedidos atrasados; revisar promessa de entrega; conferir rastreamento e abrir rotina semanal com transportadora.</td><td>1–2 semanas</td><td class="cost">R$ 0–500</td><td class="cost">R$ 0–300/mês</td><td>Entregas no prazo; contatos sobre atraso por 100 pedidos.</td></tr>
+        <tr><td><strong>Qualidade</strong></td><td>Checklist de separação/embalagem, fotos de avarias e registro de defeitos por SKU/lote.</td><td>1–3 semanas</td><td class="cost">R$ 0–600</td><td class="cost">R$ 0–250/mês</td><td>Devoluções por defeito; avarias por 100 pedidos.</td></tr>
+        <tr><td><strong>Usabilidade</strong></td><td>Realizar 5 testes de compra no celular; revisar erros de checkout, frete visível, formulários e mensagens de erro.</td><td>1–3 semanas</td><td class="cost">R$ 0–1.200</td><td class="cost">R$ 0–200/mês</td><td>Conversão do checkout; abandono; erros de pagamento.</td></tr>
+        <tr><td><strong>Outros</strong></td><td>Organizar FAQ, política de troca, modelos de resposta amigáveis e prazo de primeira resposta.</td><td>1 semana</td><td class="cost">R$ 0–300</td><td class="cost">R$ 0–200/mês</td><td>Tempo de resposta; resolução no primeiro contato.</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Como priorizar:</strong> comece pela categoria com maior taxa por pedido e maior impacto na satisfação. Se as amostras forem pequenas, leia os casos individualmente antes de investir.</p>
+  </section>
+
+  <section class="section card">
+    <h2>Analisar seus dados</h2>
+    <p class="muted">Cole um feedback por linha em cada grupo. O classificador usa palavras-chave e serve como triagem inicial; revise manualmente ironias, contexto, erros de digitação e comentários com mais de um problema.</p>
+    <div class="controls">
+      <div><label for="nameA">Nome do Grupo A</label><input id="nameA" value="Período anterior"></div>
+      <div><label for="nameB">Nome do Grupo B</label><input id="nameB" value="Período atual"></div>
+      <div><label for="dataA">Feedbacks do Grupo A (um por linha)</label><textarea id="dataA" placeholder="Ex.: Pedido chegou atrasado&#10;Produto veio com defeito&#10;Não consegui finalizar o pagamento"></textarea></div>
+      <div><label for="dataB">Feedbacks do Grupo B (um por linha)</label><textarea id="dataB" placeholder="Ex.: Entrega no prazo&#10;O site é fácil de usar&#10;A embalagem chegou danificada"></textarea></div>
+    </div>
+    <div class="actions"><button class="btn" id="analyze" type="button">Classificar e atualizar relatório</button><button class="btn secondary" id="reset" type="button">Restaurar exemplo demonstrativo</button><button class="btn secondary" id="download" type="button">Baixar resumo CSV</button></div>
+    <p class="small muted" id="status" aria-live="polite">Nenhum dado real foi enviado. Os gráficos atuais usam exemplos fictícios.</p>
+  </section>
+
+  <section class="section card">
+    <h2>Metodologia e limitações</h2>
+    <ul>
+      <li>Categorias: Logística, Qualidade, Usabilidade e Outros.</li>
+      <li>O gráfico compara volumes absolutos; sem o número total de pedidos de cada grupo, não mede taxa de reclamação nem prova piora ou melhora.</li>
+      <li>Os custos são faixas de planejamento, não orçamentos de fornecedores. Antes de contratar, solicitar ao menos duas ou três cotações e confirmar o que a plataforma atual já oferece.</li>
+      <li>Para decisões de marketing, cruze feedback com conversão, recompra, cancelamentos, devoluções, custo de frete e contatos no atendimento.</li>
+    </ul>
+    <h3>Referências para validação</h3>
+    <p class="small">IBGE (IPCA e indicadores econômicos): <a href="https://www.ibge.gov.br/" target="_blank" rel="noopener">ibge.gov.br</a> · Sebrae (gestão de e-commerce e logística): <a href="https://sebrae.com.br/" target="_blank" rel="noopener">sebrae.com.br</a> · Consumidor.gov.br (reclamações e atendimento ao consumidor): <a href="https://www.consumidor.gov.br/" target="_blank" rel="noopener">consumidor.gov.br</a>.</p>
+  </section>
+  <div class="footer">Relatório-modelo interativo · Escopo RJ e SP · Atualize com dados reais antes de usar para decisões ou apresentações executivas.</div>
+</main>
+</body>
+</html>
